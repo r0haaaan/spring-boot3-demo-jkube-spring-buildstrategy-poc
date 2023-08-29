@@ -33,4 +33,5 @@ jobs:
         run: mvn ${MAVEN_ARGS} -f "jkube/pom.xml" clean install -DskipTests -Djacoco.skip=true
       - name: Run Integration tests
         run: |
+          cd maven-it
           ./mvnw package k8s:build 
